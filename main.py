@@ -1,10 +1,17 @@
 from pytube import YouTube
 from pytube.exceptions import VideoUnavailable
 from colorama import Fore
+from sys import argv
 
 
 def main():
-    youtube_link = input("Insert youtube link: ")
+    youtube_link = ''
+
+    try:
+        youtube_link = argv[1]
+    except:
+        youtube_link = input("Insert youtube link: ")
+
     folder_path = "/Users/nephthalisalam/Downloads/"
     yt_title = YouTube(youtube_link).title
 
