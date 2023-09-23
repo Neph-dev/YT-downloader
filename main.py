@@ -12,7 +12,7 @@ def main():
     except:
         youtube_link = input("Insert youtube link: ")
 
-    folder_path = "/Users/nephthalisalam/Downloads/"
+    folder_path = "/"
     yt_title = YouTube(youtube_link).title
 
     def progress_func():
